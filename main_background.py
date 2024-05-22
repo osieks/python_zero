@@ -46,11 +46,11 @@ def main_background():
                 trigger = True
             print("Trigger: "+str(trigger))
             if("trigger" in text  or "Trigger" in text):
-                ps.playsound("triggerto.mp3")
+                ps.playsound("sound/"+"triggerto.mp3")
                 if(trigger==True):
-                    ps.playsound("True.mp3")
+                    ps.playsound("sound/"+"True.mp3")
                 elif(trigger==False):
-                    ps.playsound("False.mp3")
+                    ps.playsound("sound/"+"False.mp3")
                 else:
                     print("problem")
             if(trigger==True):
@@ -67,7 +67,7 @@ def main_background():
         except sr.UnknownValueError:
             print("Could not understand audio. Trigger = "+str(trigger))
             if(trigger==True and notunderstand == 0):
-                ps.playsound("niezrozumialem.mp3")
+                ps.playsound("sound/"+"niezrozumialem.mp3")
                 notunderstand = 1
             else:
                 notunderstand == 0

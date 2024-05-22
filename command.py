@@ -27,7 +27,7 @@ def command(question):
     #double check
     # !!! all definitions of words should be in lower case !!!
     if(question=="0" or question=="jan" or question=="jam"):
-        ps.playsound("slucham.mp3",True)
+        ps.playsound("sound/"+"slucham.mp3",True)
         return 1
     
     elif("zdjęcie" in question or "zdjęć" in question or "fokus" in question or "focus" in question):
@@ -61,7 +61,7 @@ def command(question):
                 firefoxWindow.activate()
             except:
                 print("nie udało się znaleźć: "+focusing)
-                ps.playsound("nieznalazlem.mp3")
+                ps.playsound("sound/"+"nieznalazlem.mp3")
                 print("może uruchom?")
         return 1
     # keyboard simple functionality
@@ -104,20 +104,20 @@ def command(question):
         return 1
 
     elif("nic" in question or "dzięki" in question):
-        ps.playsound("okej.mp3")
+        ps.playsound("sound/"+"okej.mp3")
         return 0
 
     elif("funkcje" in question):
         nazwa = "funkcje"
         if("aktualizuj" in question):
             if(os.path.exists(nazwa+".mp3")):
-                os.remove(nazwa+".mp3")
+                os.remove("sound/"+nazwa+".mp3")
             with open(nazwa+'.txt', mode='r' ,encoding="utf-8") as file:
                 allFunctions = file.read()
             print(allFunctions)
             createAudio.create_audio_file(nazwa,allFunctions) 
         else:
-            ps.playsound(nazwa+".mp3")
+            ps.playsound("sound/"+nazwa+".mp3")
         return 1
 
     #media control
@@ -178,18 +178,18 @@ def command(question):
 
     elif("używaj głośniku" in question or "używaj głośników" in question or "na głośniki" in question):
         os.system("D:\\GAMES_SHORTS\\PYTHON\\NirCmd_forAudio\\nircmd.exe setdefaultsounddevice \"2269WM\" ")
-        ps.playsound("naglosniki.mp3")
+        ps.playsound("sound/naglosniki.mp3")
         return 1
     elif("używaj słuchawek" in question or "na słuchawki" in question):
         os.system("D:\\GAMES_SHORTS\\PYTHON\\NirCmd_forAudio\\nircmd.exe setdefaultsounddevice \"22EA53\" ")
-        ps.playsound("nasluchawki.mp3")
+        ps.playsound("sound/nasluchawki.mp3")
         return 1
 
     elif("uruchom" in question):
         run = question.split("uruchom",1)[1]
         #run="123"
         print("uruchamianie: "+run)
-        ps.playsound("uruchamiam.mp3")
+        ps.playsound("sound/uruchamiam.mp3")
         if(len(run) >=1):
             pg.press('winleft')
             pg.typewrite(run,0.1)
@@ -223,7 +223,7 @@ def command(question):
             pg.press('enter')
 
     elif("śpij" in question or "śpi" in question or "sleep" in question or "idź spać" in question):
-        ps.playsound("spij.mp3")
+        ps.playsound("sound/spij.mp3")
         os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
         return 1
 
@@ -246,10 +246,10 @@ def command(question):
         print("tresc: "+tresc)
         if(len(tytul) >= 1 and len(tresc) >= 1):
             createAudio.create_audio_file(tytul,tresc) 
-            ps.playsound("stworzono.mp3")
+            ps.playsound("sound/stworzono.mp3")
             print("stworzono")
         else:
-            ps.playsound("nie udalo.mp3")
+            ps.playsound("sound/nie udalo.mp3")
             print("nie udało się stworzyć pliku")
         return 1
 
@@ -271,10 +271,10 @@ def command(question):
         if(len(dataToRead) >= 1):
             print("tworzenie i odtwarzanie")
             createAudio.create_audio_file(str(seed),dataToRead) 
-            os.remove(str(seed)+".mp3")
+            os.remove("sound/"+str(seed)+".mp3")
             print("usunięto")
         else:
-            ps.playsound("nie udalo.mp3")
+            ps.playsound("sound/nie udalo.mp3")
             print("nie udało się stworzyć pliku")
         return 1
 
@@ -285,19 +285,19 @@ def command(question):
 
     elif("czym jesteś" in question):
         print("jestem interfejsem głosowym")
-        ps.playsound("interface.mp3")
+        ps.playsound("sound/interface.mp3")
         return 1
 
     elif("dzień dobry" in question or "dobry" in question):
-        ps.playsound("dziendobry.mp3")
+        ps.playsound("sound/dziendobry.mp3")
         return 1
 
     elif("przywitaj się" in question or "witaj się" in question):
-        ps.playsound("dziendobry.mp3")
+        ps.playsound("sound/dziendobry.mp3")
         return 1
         
     elif("przedstaw się" in question):
-        ps.playsound("jestem.mp3")
+        ps.playsound("sound/jestem.mp3")
         return 1
 
     elif("stop" in question or "wyłącz się" in question):
@@ -308,12 +308,12 @@ def command(question):
                 time.sleep(int(na_czas))
         else:
             print("stopping")
-            ps.playsound("dowidzenia.mp3")
+            ps.playsound("sound/dowidzenia.mp3")
             #global stop
             mn.stopProgram()
         return 1
     else:
-        ps.playsound("jeszczeraz.mp3")
+        ps.playsound("sound/jeszczeraz.mp3")
         return 1
     return 0
 
