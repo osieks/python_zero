@@ -1,0 +1,8 @@
+pyaudio
+playsound==1.2.2
+gtts
+SpeechRecognition
+pygetwindow
+googletrans
+pynput
+pyautogui

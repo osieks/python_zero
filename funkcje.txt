@@ -1,0 +1,24 @@
+enter.
+otwórz.
+uruchom.
+pisz lub napisz.
+naciśnij lub kliknij.
+głośniej.
+ciszej.
+skrót aby użyć skrótu klawiszowego.
+nic lub dzięki aby zakończyć.
+szukaj lub znajdź aby znaleźć tekst na stronie. 
+śpij sleep lub idź spać aby uśpić komputer.
+wyłącz komputer aby wyłączyć.
+zresetuj komputer aby zrestartować.
+stwórz audio o treści o tytule aby stworyć mp3.
+przeczytaj aby przeczytać na głos.
+tłumacz lub przetłumacz aby przeczytać na głos przetłumaczone.
+czym jesteś abym wytłumaczył co to za program.
+przedstaw się albo przywitaj się dla bazowych odpowiedzi.
+stop lub wyłącz się aby wyłączyć ten program.
+
+Do muzyki:
+uruchom albo zatrzymaj muzykę.
+ciszej albo głośniej albo wycisz.
+następny albo poprzedni utwór.
